@@ -28,7 +28,7 @@ class mysql_mmm extends zabbixCommon {
 	private $monitor_running;
 
 	public function __construct() {
-		if ($GLOBALS['zabbix']['debug_mode']) zabbixCommon::debugLog(get_class($this));
+		if ($GLOBALS['memene']['debug_mode']) zabbixCommon::debugLog(get_class($this));
 		$this->dat = $GLOBALS['memene']['config_directory']."zabbix.dat";
 		$this->utime = $GLOBALS['memene']['config_directory']."zabbix.utime";
 		$this->dtime = $GLOBALS['memene']['config_directory']."zabbix.dtime";
@@ -59,12 +59,12 @@ class mysql_mmm extends zabbixCommon {
 	private function postToZabbix() {
 		foreach ( $this->data as $key => $var ) {
 			foreach ($var as $subkey=>$subval) {
-				if ($GLOBALS['zabbix']['debug_mode']) zabbixCommon::debugLog("mysql_mmm: $subkey | $subval");
+				if ($GLOBALS['memene']['debug_mode']) zabbixCommon::debugLog("mysql_mmm: $subkey | $subval");
 				$this->zabbix_post('mysql_mmm',$subkey,$subval);
 			}
 		}
-		echo 1;
-		exit(0);
+		//echo 1;
+		//exit(0);
 	}
 	private function lookForAgent() {
 		// check
