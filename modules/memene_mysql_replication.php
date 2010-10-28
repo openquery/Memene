@@ -165,6 +165,7 @@
 	    $this->err_msg = $this->slave_status['Last_Error'];
 	    if ($this->err_no == 0 && $this->err_msg == '') {
 	    	$this->slave_errors = false;
+	    	return;
 		}
 		$this->slave_errors = true;
 	}
