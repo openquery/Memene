@@ -288,7 +288,7 @@
 						<application>Performance</application>
 					</applications>
 				</item>
-				<item type="0" key="net.tcp.service[ntp]" value_type="3">
+				<item type="0" key="proc.num[ntpd]" value_type="3">
 					<description>Time (NTP) server is running</description>
 					<ipmi_sensor></ipmi_sensor>
 					<delay>60</delay>
@@ -311,9 +311,8 @@
 					<snmpv3_securitylevel>0</snmpv3_securitylevel>
 					<snmpv3_authpassphrase></snmpv3_authpassphrase>
 					<snmpv3_privpassphrase></snmpv3_privpassphrase>
-					<valuemap>Service state</valuemap>
 					<applications>
-						<application>Services</application>
+						<application>Processes</application>
 					</applications>
 				</item>
 				<item type="0" key="net.tcp.service[smtp]" value_type="3">
@@ -344,7 +343,7 @@
 						<application>Services</application>
 					</applications>
 				</item>
-				<item type="0" key="net.tcp.service[ssh]" value_type="3">
+				<item type="0" key="proc.num[sshd]" value_type="3">
 					<description>SSH server is running</description>
 					<ipmi_sensor></ipmi_sensor>
 					<delay>60</delay>
@@ -367,9 +366,8 @@
 					<snmpv3_securitylevel>0</snmpv3_securitylevel>
 					<snmpv3_authpassphrase></snmpv3_authpassphrase>
 					<snmpv3_privpassphrase></snmpv3_privpassphrase>
-					<valuemap>Service state</valuemap>
 					<applications>
-						<application>Services</application>
+						<application>Processes</application>
 					</applications>
 				</item>
 				<item type="0" key="proc.num[,,run]" value_type="3">
