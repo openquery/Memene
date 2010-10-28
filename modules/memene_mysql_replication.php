@@ -132,6 +132,7 @@
 	private function  slaveIORunning() {
 		if ($this->slave_status['Slave_IO_Running'] == "Yes") {
 				$this->slave_io_running = true;
+				return;
 		}
 		$this->slave_io_running = false;
 
@@ -139,6 +140,7 @@
 	private function slaveSQLRunning() {
 		if ($this->slave_status['Slave_SQL_Running'] == "Yes") {
 				$this->slave_sql_running = true;
+				return;
 		}
 		$this->slave_sql_running = false;
 	}
